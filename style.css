@@ -1,0 +1,159 @@
+/*
+Colors
+Dark green: #566e3a;
+light green: #bbc471;
+*/
+
+html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  background: #eeeeee;
+}
+/********************************Index.html starts*************************************/
+/*Navigation style starts*/
+.navbar{
+  border-radius: 0;
+  margin:0;
+}
+.navbar-inverse{
+  background: #566e3a;
+  border-color: white;
+  border: 0px;
+}
+.navbar-inverse .navbar-brand{
+  color:#ffffff;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus{
+  font-weight: 600;
+}
+.navbar-inverse .navbar-nav>li>a{
+  color:#ffffff;
+  font-size: 1.1em;
+}
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus{
+  background: #ffffff;
+  color: #566e3a;
+}
+.navbar-inverse .navbar-toggle{
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus{
+  background: white;
+  color: #566e3a;
+}
+/*Navigation style ends*/
+
+/*Jumbotron style starts*/
+.jumbotron{
+  background:url(hamro-rooms-bg1.jpg) no-repeat center;
+  background-size: cover;
+  padding:0;
+}
+.jumbo-content{
+  padding:12% 0 5% 0;
+  background: rgba(0,0,0,0.5);
+  color:#ffffff;
+}
+#search-banner{
+  
+  margin: 0 auto;
+  background: rgba(255,255,255,0.75);
+  min-width: 315px;
+  color: #000000;
+  padding:2% 1%;
+  margin-top: 5%;
+}
+
+
+.banner-input{
+  background: #ffffff;
+  border:1px solid red;
+  height: 50px;
+}
+#search-text{
+  width: 80%;
+}
+
+
+.recent-items{
+  text-align: center;
+  background: white;
+  padding: 0 0 2% 0;
+/*  margin: 5% 0;*/
+  /*border-radius: 5px;*/
+  overflow: hidden;
+}
+.recent-items .image{
+  background: url(http://www.thekeycollection.ie/cmsGallery/imagerow/7524/resized/500x500/bed_and_breakfast_gardiner_street_dublin.jpg) no-repeat center;
+  background-size: cover;
+  padding: 25% 0;
+}
+
+.ri-more{
+  background: #bbc471;
+  border: 0;
+  padding: 2%;
+  line-height: initial;
+  margin: 0 1%;
+}
+
+
+/*Jumbotron style ends*/
+
+.click_here_btn{
+  background: transparent;
+  border: 2px solid #bbc471;
+  color: #bbc471;
+  /*padding: 1.5% 4%;*/
+  width: 150px;
+  height: 40px;
+  font-size: 1.2em;
+}
+.click_here_btn:hover,
+.click_here_btn:active,
+.click_here_btn:focus{
+  outline: none;
+  border: 0;
+  background: #bbc471;
+  color: #ffffff;
+}
+
+.p-item{
+  background: white;
+  text-align: center;
+  margin: 2% 0;
+  padding: 2% 0 0 0;
+}
+
+.p-item-read-more{
+  display: inline-block;
+  background: #ffffff;
+  color: #566e3a;
+  width: 100%;
+  padding: 2% 0;
+  border: 0;
+}
+.p-item-read-more:hover,
+.p-item-read-more:active,
+.p-item-read-more:focus{
+  outline: none;
+  border: 0;
+  background: #566e3a;
+  color: #ffffff;
+}
+
+.pop{
+  margin: 0 auto;
+}
+.pop .col-sm-3{
+  padding: 0 2px 0 0;
+}
