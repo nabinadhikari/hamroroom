@@ -57,6 +57,7 @@ body{
   background:url(hamro-rooms-bg1.jpg) no-repeat center;
   background-size: cover;
   padding:0;
+  margin: 0;
 }
 .jumbo-content{
   padding:12% 0 5% 0;
@@ -82,15 +83,18 @@ body{
 #search-text{
   width: 80%;
 }
+/*Jumbotron style ends*/
 
-
+/*Recent items style starts*/
+.recent-added-items{
+  /*background: yellow;*/
+  margin: 3% 0;
+}
 .recent-items{
   text-align: center;
   background: white;
   padding: 0 0 2% 0;
-/*  margin: 5% 0;*/
-  /*border-radius: 5px;*/
-  overflow: hidden;
+  margin: 5% 0;
 }
 .recent-items .image{
   background: url(http://www.thekeycollection.ie/cmsGallery/imagerow/7524/resized/500x500/bed_and_breakfast_gardiner_street_dublin.jpg) no-repeat center;
@@ -98,48 +102,38 @@ body{
   padding: 25% 0;
 }
 
-.ri-more{
+.recent-items .ri-more{
   background: #bbc471;
   border: 0;
   padding: 2%;
   line-height: initial;
   margin: 0 1%;
 }
+/*Recent items style starts*/
 
 
-/*Jumbotron style ends*/
-
-.click_here_btn{
-  background: transparent;
-  border: 2px solid #bbc471;
-  color: #bbc471;
-  /*padding: 1.5% 4%;*/
-  width: 150px;
-  height: 40px;
-  font-size: 1.2em;
+/*Popular item starts*/
+.popular-items{
+  margin: 0 0 3% 0;
 }
-.click_here_btn:hover,
-.click_here_btn:active,
-.click_here_btn:focus{
-  outline: none;
-  border: 0;
-  background: #bbc471;
-  color: #ffffff;
+.popular-items .r{
+  margin: 0 auto;
 }
-
+.popular-items .c{
+  padding: 0 2px 0 0;
+}
 .p-item{
   background: white;
   text-align: center;
-  margin: 2% 0;
-  padding: 2% 0 0 0;
+  margin: 5% 0;
+  padding: 3% 0 0 0;
 }
-
 .p-item-read-more{
   display: inline-block;
   background: #ffffff;
   color: #566e3a;
   width: 100%;
-  padding: 2% 0;
+  padding: 2.5% 0;
   border: 0;
 }
 .p-item-read-more:hover,
@@ -150,10 +144,92 @@ body{
   background: #566e3a;
   color: #ffffff;
 }
+/*Popular item ends*/
 
-.pop{
-  margin: 0 auto;
+/*Button style start*/
+.click_here_btn{
+  background: transparent;
+  border: 2px solid #566e3a;
+  color: #566e3a;
+  width: 150px;
+  height: 40px;
+  font-size: 1.2em;
 }
-.pop .col-sm-3{
-  padding: 0 2px 0 0;
+.click_here_btn:hover,
+.click_here_btn:active,
+.click_here_btn:focus{
+  outline: none;
+  border: 0;
+  background: #566e3a;
+  color: #ffffff;
 }
+/*Button style end*/
+
+/*Testimony style start*/
+.testimonials {
+  background: #ffffff;
+  padding: 2% 0;
+}
+
+.testimonials .rr{
+  margin:10px 0;
+  padding: 0;
+}
+.testimonials .rr div{
+  margin-top:2%;
+}
+/*Testimony style end*/
+
+/*Footer style starts*/
+.foot{
+  background: #333333;
+  color: #ffffff;
+  padding: 5% 0;
+}
+.foot .nav li a{
+  padding: 0;
+  color: #ffffff;
+  margin-top: 1%;
+  display: inline-block;
+}
+.foot .nav li a:hover,
+.foot .nav li a:active,
+.foot .nav li a:focus{
+  background: transparent;
+  text-decoration: underline;
+}
+.social{
+  font-size: 150%;
+  margin: 5% 0;
+}
+.social a{
+  display: inline-block;
+  background: white;
+  padding: 1.75% 5%;
+  /*padding: 5px 15px;*/
+  text-align: center;
+  margin-right: 1.5%;
+}
+.social a:hover,
+.social a:active,
+.social a:focus{
+  color: #000000;
+}
+.address div{
+  margin:1% 0;
+  padding: 0;
+}
+.address i{
+  font-size: 150%;
+}
+/*Footer style ends*/
+
+/*Copyright starts*/
+.copyright{
+  padding: 1.5% 0;
+  text-align: center;
+  color: #ffffff;
+  background: #000000;
+  font-size: 1em;
+}
+/*Copyright ends*/
