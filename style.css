@@ -13,11 +13,7 @@ body{
   background: #eeeeee;
 }
 /********************************Index.html starts*************************************/
-/*top bar style starts*/
-.top-bar{
-  text-align: right;
-}
-/*top bar style ends*/
+
 
 /*Navigation style starts*/
 .navbar{
@@ -67,9 +63,10 @@ body{
 #nav-login:active,
 #nav-login:focus{
   outline: none;
-  background: white;
-  color: #566e3a;
-  border: 1px solid white;
+  /*background: white;*/
+  /*color: #566e3a;*/
+  color: black;
+  border: 1px solid black;
 }
 /*Navigation style ends*/
 
@@ -92,7 +89,7 @@ body{
 }
 .jumbo-content{
   padding:10% 0 5% 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
   color:#ffffff;
 }
 #search-banner{
@@ -293,3 +290,11 @@ body{
   font-size: 1em;
 }
 /*Copyright ends
+
+/*Heading style for recently added items and popular items*/
+.section-heading{
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  padding-bottom: 1%;
+}
