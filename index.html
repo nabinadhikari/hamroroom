@@ -3,7 +3,7 @@
     <head>
         <title>Welcome to Hamro Rooms</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="style.css" type="text/css" />
@@ -11,10 +11,10 @@
     <body>
         
         <!--Top section - Login/signup and search bar starts-->
-        <div class="">
+        <!-- <div class="top-bar">
             <span>Login / Signup </span>
             <span>Search icon </span>
-        </div>
+        </div> -->
         <!--Top section - Login/signup and search bar ends-->
         
         <!--Navigation menu starts-->
@@ -28,6 +28,9 @@
             </div>
 
             <div class="collapse navbar-collapse" id="hamro-rooms-navbar">
+              <form class="navbar-form navbar-right">
+                    <button type="submit" class="btn btn-default btn-block" id="nav-login">Login</button>
+              </form>
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
@@ -45,11 +48,24 @@
         <div class="jumbotron">
           <div class="jumbo-content">
             <div class="container text-center">
-              <h2>Let's find you a room or a room-mate</h2>
-              <div id="search-banner">
+              <span id="app-name">Hamro Rooms</span>
+              <span id="app-desc">Let's find you a room or a room-mate</span>
+              <div id="search-banner" class="row">
 
-                IPUTS GOES HERE
-                
+                <form>
+                  <div class="col-sm-2">
+                    <select class="select">
+                      <option>1</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="text" name="" class="text" placeholder="Find your room">
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="submit" name="" value="Find" class="find">
+                  </div>
+                </form>
+
               </div>
             </div>
           </div>
@@ -156,28 +172,28 @@
                 <div class="address">
                   <h3>Address</h3>
                       <div class="row">
-                        <div class="col-xs-1">
+                        <div class="col-xs-2">
                           <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </div>
-                        <div class="col-xs-11">
+                        <div class="col-xs-10">
                           63 Munro St, Coburg, VIC 3058, Australia
                         </div>
                       </div>
 
                       <div class="row">
-                        <div class="col-xs-1">
+                        <div class="col-xs-2">
                           <i class="fa fa-phone" aria-hidden="true"></i>
                         </div>
-                        <div class="col-xs-11">
+                        <div class="col-xs-10">
                           +61 0424 790 692
                         </div>
                       </div>
 
                       <div class="row">
-                        <div class="col-xs-1">
+                        <div class="col-xs-2">
                           <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         </div>
-                        <div class="col-xs-11">
+                        <div class="col-xs-10">
                           hamrorooms@gmail.com
                         </div>
                       </div>
@@ -190,7 +206,7 @@
 
         <!-- Copyright starts -->
         <div class="copyright">
-          Copyright (c) 2017 All Rights
+          Copyright (c) 2017 All Rights Reserved
         </div>
         <!-- Copyright ends -->
         

@@ -13,6 +13,12 @@ body{
   background: #eeeeee;
 }
 /********************************Index.html starts*************************************/
+/*top bar style starts*/
+.top-bar{
+  text-align: right;
+}
+/*top bar style ends*/
+
 /*Navigation style starts*/
 .navbar{
   border-radius: 0;
@@ -30,7 +36,7 @@ body{
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus{
-  font-weight: 600;
+  color: #bbc471;
 }
 .navbar-inverse .navbar-nav>li>a{
   color:#ffffff;
@@ -44,11 +50,26 @@ body{
 .navbar-inverse .navbar-toggle{
     color: #ffffff;
     border-color: #ffffff;
+    border-radius: 0;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus{
   background: white;
   color: #566e3a;
+}
+#nav-login{
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 0;
+}
+#nav-login:hover,
+#nav-login:active,
+#nav-login:focus{
+  outline: none;
+  background: white;
+  color: #566e3a;
+  border: 1px solid white;
 }
 /*Navigation style ends*/
 
@@ -59,30 +80,66 @@ body{
   padding:0;
   margin: 0;
 }
+#app-name{
+  font-size: 300%;
+  font-weight: 300;
+  display: block;
+}
+#app-desc{
+  display: block;
+  font-weight: 100;
+  font-size: 150%;
+}
 .jumbo-content{
-  padding:12% 0 5% 0;
+  padding:10% 0 5% 0;
   background: rgba(0,0,0,0.5);
   color:#ffffff;
 }
 #search-banner{
-  
   margin: 0 auto;
   background: rgba(255,255,255,0.75);
   min-width: 315px;
   color: #000000;
-  padding:2% 1%;
+  padding:1.5% 1.5%;
   margin-top: 5%;
 }
-
-
-.banner-input{
-  background: #ffffff;
-  border:1px solid red;
-  height: 50px;
+#search-banner div{
+  padding: 0;
+  margin: 1% 0;
 }
-#search-text{
-  width: 80%;
+#search-banner .select, .text, .find{
+  height: 45px;
+  margin:0;
+  width: 100%;
+  border: 1px solid #566e3a;
 }
+
+#search-banner *:hover,
+#search-banner *:active,
+#search-banner *:focus{
+  outline:0;
+}
+#search-banner .select{
+  padding: 1% 2%;
+}
+#search-banner .text{
+  padding: 1% 2%;
+}
+#search-banner .find{
+  background: #566e3a;
+}
+#search-banner .find:hover,
+#search-banner .find:active,
+#search-banner .find:focus{
+  background: black;
+  border: 1px solid black;
+  color: #ffffff;
+}
+#search-banner .select{
+  /*background: #bbc471;*/
+  background: white;
+}
+
 /*Jumbotron style ends*/
 
 /*Recent items style starts*/
@@ -222,6 +279,9 @@ body{
 .address i{
   font-size: 150%;
 }
+.foot .row .col-*{
+  margin:50px 0;
+}
 /*Footer style ends*/
 
 /*Copyright starts*/
@@ -232,4 +292,4 @@ body{
   background: #000000;
   font-size: 1em;
 }
-/*Copyright ends*/
+/*Copyright ends
