@@ -2,7 +2,11 @@ var mongoose = require("mongoose");
 
 var roomSchema = mongoose.Schema({
     title: String,
-    image: [],
+    image: [
+      {
+        type: String
+      }
+    ],
     description: String,
     location: String,
     bedroom: Number,

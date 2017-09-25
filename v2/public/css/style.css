@@ -58,6 +58,7 @@ body{
   border: 1px solid white;
   color: white;
   border-radius: 0;
+
 }
 #nav-login:hover,
 #nav-login:active,
@@ -313,8 +314,14 @@ Colors
 Dark green: #566e3a;
 light green: #bbc471;
 */
+#new{
+  /* give it top margin */
+  margin-top: 5rem;
+}
+
 #new form input[type='text'],
-#new textarea{
+#new textarea,
+#new select{
   border: 1px solid #bbc471;
   border-radius: 0;
 }
@@ -324,7 +331,10 @@ light green: #bbc471;
 #new form input[type='text']:focus,
 #new textarea:hover,
 #new textarea:active,
-#new textarea:focus{
+#new textarea:focus,
+#new select:hover,
+#new select:active,
+#new select:focus{
   outline: none;
   -webkit-box-shadow:none;
   box-shadow: 0;

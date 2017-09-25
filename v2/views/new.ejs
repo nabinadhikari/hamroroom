@@ -4,7 +4,7 @@
         <div id="new">
             <div class="container">
                 <h1 class="text-center">Add New Room</h1>
-      
+
                 <form class="form-horizontal" action="/rooms" method="post">
                   <div class="form-group">
                     <label for="title" class="col-sm-2 control-label">Title</label>
@@ -12,41 +12,74 @@
                       <input type="text" class="form-control" id="title" placeholder="Title" name="room[title]">
                     </div>
                   </div>
-      
+
                   <div class="form-group">
                       <label for="location" class="col-sm-2 control-label">Location</label>
                       <div class="col-sm-10">
                         <input type="text" class="form-control" id="location" placeholder="Location" name="room[location]">
                       </div>
                     </div>
-      
+
                     <div class="form-group">
                       <label for="image" class="col-sm-2 control-label">Image</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="image" placeholder="Image Url" name="room[image]">
+                        <!-- <input type="text" class="form-control" id="image" placeholder="Image Url" name="room[image]"> -->
+                        <input type="file" name="image">
                       </div>
                     </div>
-      
+
                     <div class="form-group">
-                      <label for="info" class="col-sm-2 control-label">Bedroom, Bathroom, Garage</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" id="info" placeholder="Bedroom, Bathroom, Garage" name="romm[bedroom]">
+                      <label for="info" class="col-sm-2 control-label">Bedroom</label>
+                      <div class="col-sm-2">
+                        <!-- <input type="text" class="form-control" id="info" placeholder="Bedroom, Bathroom, Garage" name="romm[bedroom]"> -->
+                        <select class="form-control" name="room[bedroom]">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5+</option>
+                        </select>
+                      </div>
+
+                      <label for="info" class="col-sm-2 control-label">Bathroom</label>
+                      <div class="col-sm-2">
+                        <!-- <input type="text" class="form-control" id="info" placeholder="Bedroom, Bathroom, Garage" name="romm[bedroom]"> -->
+                        <select class="form-control" name="room[bathroom]">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5+</option>
+                        </select>
+                      </div>
+
+                      <label for="info" class="col-sm-2 control-label">Garage</label>
+                      <div class="col-sm-2">
+                        <!-- <input type="text" class="form-control" id="info" placeholder="Bedroom, Bathroom, Garage" name="romm[bedroom]"> -->
+                        <select class="form-control" name="room[garage]">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5+</option>
+                        </select>
                       </div>
                     </div>
-      
+
                     <div class="form-group">
                       <label for="desc" class="col-sm-2 control-label">Description</label>
                       <div class="col-sm-10">
-                          <textarea class="form-control" rows="3" id="desc" name="room[description]"></textarea>
+                          <textarea class="form-control" rows="10" id="desc" name="room[description]"></textarea>
                       </div>
                     </div>
-                  
+
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" class="btn btn-default click_here_btn">Submit</button>
-                      <button type="reset" class="btn btn-default click_here_btn" style="float:right;">Clear</button>
+                      <button type="reset" class="btn btn-default click_here_btn pull-right">Clear</button>
                     </div>
-      
+
                   </div>
                 </form>
               </div>
