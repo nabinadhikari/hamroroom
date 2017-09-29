@@ -343,3 +343,58 @@ light green: #bbc471;
 
 
 /******************************** New Finish*********************************/
+
+/********************************Dashboard start*********************************/
+#dashboard{
+  margin: 5% 0;
+}
+#list .list-group-item{
+  border-radius: 0 !important;
+}
+#list .active{
+  background: #bbc471;
+  border:0;
+}
+
+.dashboard-content{
+  /* border: 1px solid #bbc471; */
+  padding: 0;
+}
+#dashboard .one-room{
+  background: #ffffff;
+  padding: 2%;
+}
+
+#dashboard .one-room i{
+  margin: 0 10px;
+}
+.one-room{
+  margin-bottom: 1.5%;
+}
+#dashboard .one-room a{
+  text-decoration: none;
+  color: #566e3a;
+}
+#dashboard .one-room a:hover,
+#dashboard .one-room a:active,
+#dashboard .one-room a:focus{
+  color: #bbc471;
+}
+
+/********************************Dashboard start*********************************/
+
+
+/********************************Colors start*********************************/
+.red{
+  color: #ff0000;
+}
+.light-green{
+ color: #bbc471;
+}
+.dark-green{
+  color: #566e3a;
+}
+.black{
+  color: #000000;
+}
+/********************************Colors end*********************************/

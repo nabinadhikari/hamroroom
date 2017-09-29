@@ -27,6 +27,10 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser({uploadDir: './public/images'}));
 app.use(methodOverride("_method"));
+app.use(function(req, res, next){
+    res.locals.currentUser = req.user;
+    next();
+  });
 
 //============================================================
 // PASSPORT CONFIG
@@ -147,9 +151,19 @@ app.get("/logout", function(req, res){
 // DASHBOARD ROUTE
 //============================================================
 app.get("/dashboard", function(req, res){
-    res.render("dashboard");
+    res.redirect("/dashboard/rooms");
 });
 
+app.get("/dashboard/rooms", function(req,res){
+    Room.find({username: req.user}, function(err, rooms){
+        console.log(rooms);
+    });
+    res.render("myrooms");
+})
+
+app.get("/dashboard/rooms/new", function(req, res){
+    res.render("new_room");
+});
 
 //============================================================
 // START SERVER

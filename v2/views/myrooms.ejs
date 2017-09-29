@@ -1,0 +1,35 @@
+<% include ./partials/header %>
+
+<div id="dashboard">
+    <div class="container">
+        
+        <div class="col-sm-3">
+            <div class="list-group" id="list">
+                <li class="list-group-item">Add New Room</li>
+                <li class="list-group-item active">My Rooms</li>
+                <li class="list-group-item">Update Profile</li>
+                <li class="list-group-item">Logout</li>
+            </div>
+        </div>
+    
+        <div class="col-sm-9">
+            <div class="dashboard-content">
+                <!-- <h3 class="text-center">ALL OF UPLOADED ROOMS</h3> -->
+                <div class="row">
+                    <%= currentUser %>
+                    <div class="col-sm-12">
+                        <p class="one-room">                        
+                            <a href="" class="pull-right"><i class="fa fa-trash red" aria-hidden="true"></i></a>                                        
+                            <a href="" class="pull-right"><i class="fa fa-pencil black" aria-hidden="true"></i></a>
+                            <a href="">Lorem ipsum is simply the best and there is more to it and there is more to</a> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>
+
+
