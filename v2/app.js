@@ -147,7 +147,7 @@ app.get("/logout", function(req, res){
 // DASHBOARD ROUTE
 //============================================================
 app.get("/dashboard", function(req, res){
-    res.send("You are now logged in, THIS IS YOUR DASHBOARD");
+    res.render("dashboard");
 });
 
 
