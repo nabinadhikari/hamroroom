@@ -7,23 +7,41 @@ var express         = require("express"),
     methodOverride  = require("method-override"),
     mongoose        = require("mongoose"),
     User            = require("./models/user"),
-    Room            = require("./models/room");
+    Room            = require("./models/room"),
+    passport        = require("passport"),
+    localStrategy   = require("passport-local"),
+    expressSession  = require("express-session");
 
 
 //============================================================
 // SEEDING INITIAL DATA
 //============================================================
-require("./seeds")();
+//require("./seeds")();
 
 //============================================================
 // APP CONFIG
 //============================================================
-mongoose.connect("mongodb://localhost/rest_hamrorooms");
+mongoose.connect("mongodb://localhost/hamrorooms");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser({uploadDir: './public/images'}));
 app.use(methodOverride("_method"));
+
+//============================================================
+// PASSPORT CONFIG
+//============================================================
+app.use(expressSession({
+    secret: "My name is not Nabin Adhikari",
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 //============================================================
 // Routes - Index
@@ -86,8 +104,52 @@ app.get("/signup", function(req,res){
 });
 
 app.post("/signup", function(req, res){
-    
+    var newUser = new User({
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        username: req.body.username
+    });
+    User.register(newUser, req.body.password, function(err, user){
+        if(err){
+            console.log(err);
+            return res.redirect("/signup");
+        }
+        passport.authenticate("local")(req, res, function(){
+            res.redirect("/dashboard");
+        });
+    });
 });
+
+//============================================================
+// LOGIN ROUTE
+//============================================================
+app.get("/login", function(req, res){
+    res.render("login");
+});
+
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/dashboard",
+    failureRedirect: "/login"
+}),function(){
+    // Login callback
+});
+
+//============================================================
+// LOGOUT ROUTE
+//============================================================
+app.get("/logout", function(req, res){
+    req.logout();
+    res.redirect("/");
+})
+
+//============================================================
+// DASHBOARD ROUTE
+//============================================================
+app.get("/dashboard", function(req, res){
+    res.send("You are now logged in, THIS IS YOUR DASHBOARD");
+});
+
 
 //============================================================
 // START SERVER

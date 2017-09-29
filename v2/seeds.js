@@ -47,7 +47,7 @@ function seeds(){
         console.log("ROOM DELETED");
         // Delete user
         User.remove({}, function(err){
-            console.log("ROOM DELETED");    
+            console.log("USER DELETED");    
             // Add user now
             User.create({
                 fname:"Nabin",

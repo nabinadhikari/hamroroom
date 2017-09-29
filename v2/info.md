@@ -41,11 +41,18 @@ Incremental
 - sbat update password
 - sbat SEARCH
 
-- Should be able to register
 
+
+- Should be able to register
 package needed
 passport
 passport-local
 passport-local-mongoose
 express-session
+and redirect to dashboard
+
+- Should be able to login
+- Should be able to logout
+
+- Dashboard
 
